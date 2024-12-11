@@ -22,7 +22,7 @@ pip install .
 You can also install it via `pip` from PyPI:
 
 ```bash
-pip install logmagix
+pip install MailTmWrapper
 ```
 
 ## 🔧 Usage
@@ -38,7 +38,8 @@ from mailtmwrapper import MailTM
 You can create a temporary email account using the `create_account` method:
 
 ```python
-mail = MailTM()
+token = MailTM().create_token(email, password)
+mail = MailTM(token) # token is optional
 
 # Create a new temporary email account
 account = mail.create_account()
