@@ -1,4 +1,4 @@
-# MailTM Wrapper
+<h2 align="center">Discord Username Checker</h2>
 
 **MailTmWrapper** is a Python library designed to interact with the Mail.TM API, providing an easy-to-use interface for creating temporary email accounts and managing email messages programmatically. This wrapper simplifies operations such as generating tokens, retrieving messages, and managing accounts.
 
@@ -173,13 +173,12 @@ else:
     print(f"Failed to delete account. Status code: {status_code}")
 ```
 
-
 ## ❗ Requirements
 
 MailTmWrapper requires:
 
 - `requests` to send requests to the Mail.TM API.
-To install dependencies manually, run:
+  To install dependencies manually, run:
 
 ```bash
 pip install requests
