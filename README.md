@@ -22,7 +22,7 @@ pip install .
 You can also install it via `pip` from PyPI:
 
 ```bash
-pip install logmagix
+pip install MailTmWrapper
 ```
 
 ## 🔧 Usage
