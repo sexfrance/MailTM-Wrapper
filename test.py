@@ -14,12 +14,12 @@ if __name__ == "__main__":
     mail = MailTM()  # Initialize mailTM
     
     # Create random account
-    account = mail.create_account(email=None, password='test!')
+    account = mail.create_account(email = None, password='test!')
     print(f"Created account: {account['address']}")
     
     # Get auth token
     token = mail.create_token(account['address'], password='test!')
-    print(f"Got auth token: {token[:20]}...")
+    print(f"Got auth token: {token}...")
     
 
     check_inbox(token)

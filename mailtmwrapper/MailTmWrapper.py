@@ -9,7 +9,7 @@ class MailTM:
     def __init__(self, token: str = None, proxy_dict: Dict = None):
         self.token = token
         self.proxy_dict = proxy_dict
-        self.headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
+        self.headers = {'Accept': 'application/json', 'Content-Type': 'application/json' }
         if token:
             self.headers['Authorization'] = f'Bearer {token}'
 
@@ -26,12 +26,12 @@ class MailTM:
         if response.status_code in [200, 201]:
             return response.json()
         elif response.status_code == 204:
-            return response.status_code
-        return response.status_code
+            return response.json()
+        return response.json()
 
     def create_account(self, email: str = None, password: str = None) -> Dict:
         if not email:
-            email = f"temp_{random.randint(1, 999999999)}@freesourcecodes.com"
+            email = f"temp_{random.randint(1, 999999999)}@tohru.org" 
         if not password:
             password = ''.join(random.choices(string.ascii_letters + string.digits + "!@#$%^&*()_+-=[]{}|;:,.<>?/", k=16))
             
